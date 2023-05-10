@@ -62,7 +62,7 @@
 
 
 
-input[type="text"] {
+.input_chat {
     margin-top: 8px;
     margin-left: 10px;
     background: transparent;
