@@ -2,6 +2,8 @@
     --background_view: #313131;
     --background_input: #000000;
     --background_button: #F9096C;
+    --background_button_hover: #f9096dc4;
+    --background_gift: #111111;
     --text_color: #ffffff;
 }
 
@@ -16,9 +18,24 @@
         "chatinput chatinput sendbutton";
 }
 
+@media (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        grid-template-rows: 1.5fr 0.7fr 0.1fr 1.6fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "viewcam viewcam"
+            "chatarea chatarea"
+            "chatinput sendbutton"
+            "mycam mycam";
+    }
+}
+
 .viewcam {
     grid-area: viewcam;
     background-color: var(--background_view);
+    position: relative;
 }
 
 .mycam {
@@ -41,15 +58,7 @@
     grid-area: sendbutton;
 }
 
-button {
-    border: 1px solid var(--background_button);
-    width: 100%;
-    height: 40px;
-    background-color: var(--background_button);
-    color: var(--text_color);
-    font-size: 18px;
 
-}
 
 input[type="text"] {
     margin-top: 8px;
@@ -62,16 +71,76 @@ input[type="text"] {
     font-size: 18px;
 }
 
-@media (max-width: 600px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1.3fr 0.7fr;
-        grid-template-rows: 1.6fr 0.7fr 0.1fr 1.6fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            "viewcam viewcam"
-            "chatarea chatarea"
-            "chatinput sendbutton"
-            "mycam mycam";
-    }
+
+.button_bar {
+    position: absolute;
+    bottom: 5px;
+    z-index: 1;
+    opacity: 0.7;
+
+}
+
+.button_send {
+    border: 1px solid var(--background_button);
+    width: 100%;
+    height: 40px;
+    background-color: var(--background_button);
+    color: var(--text_color);
+    font-size: 18px;
+
+}
+
+.button_send:hover,
+.gift_button:hover {
+    cursor: pointer;
+    background-color: var(--background_button_hover);
+}
+
+.gift_button {
+    background-color: var(--background_button);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px;
+    margin-top: 7px;
+
+
+}
+
+.gift_button2 img,
+.gift_button img {
+    width: 26px;
+    height: 40px;
+}
+
+.gift_button2 {
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px;
+}
+
+.dropup {
+    position: absolute;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+
+.dropup:hover .dropup-content {
+    display: block;
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background_gift);
+    color: var(--text_color);
+    margin-top: -50px;
+    z-index: 1;
+    border-radius: 30px;
+    width: 50px;
 }
