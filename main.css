@@ -130,12 +130,16 @@ input[type="text"] {
 }
 
 
+
 .dropup:hover .dropup-content {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .dropup-content {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
     position: absolute;
     background-color: var(--background_gift);
     color: var(--text_color);
