@@ -36,7 +36,7 @@
             "mycam mycam";
     }
 
-    .top_right {
+    .mystats {
         position: absolute;
         top: 0px;
     }
@@ -209,7 +209,7 @@
 
 }
 
-.top_right {
+.mystats {
     position: absolute;
     right: 0px;
     bottom: 0px;
@@ -221,9 +221,8 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    text-align: center;
-    margin-top: 5px;
     border: solid 2px var(--text_color);
+    margin-top: 5px;
     float: left;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -257,4 +256,47 @@
 
 .loading img {
     width: 30%
+}
+
+.settings {
+    position: absolute;
+}
+
+.cam {
+    margin: 2px;
+    background-color: var(--background_view);
+    background-image: url(assets/img/eye_on.svg);
+    width: 20px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+.cam:hover {
+    background-image: url(assets/img/eye_off.svg);
+}
+
+.mic {
+    margin: 2px;
+    margin-left: 0px;
+    background-color: var(--background_view);
+    background-image: url(assets/img/mic_on.svg);
+    width: 20px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+.mic:hover {
+    background-image: url(assets/img/mic_off.svg);
+}
+
+.viewcam .settings {
+    bottom: 0px;
 }
