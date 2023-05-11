@@ -235,6 +235,13 @@
 }
 
 .loading {
+    display: none;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 15%);
+    left: calc(50% - 10%);
+
+}
+
+.loading img {
+    width: 30%
 }
