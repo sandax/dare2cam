@@ -1,10 +1,12 @@
 :root {
+    --background_bell: green;
     --background_view: #313131;
     --background_input: #000000;
     --background_button: #F9096C;
     --background_button_hover: #f9096dc4;
     --background_gift: #11111196;
     --text_color: #ffffff;
+
 }
 
 .container {
@@ -111,6 +113,7 @@
 
 }
 
+
 .gift_button2 img,
 .gift_button img {
     width: 26px;
@@ -174,4 +177,42 @@
 .next_button:hover {
     background-color: var(--background_button);
     opacity: 1;
+}
+
+.timer {
+    background-color: var(--background_gift);
+    color: var(--text_color);
+    width: 100px;
+    height: 30px;
+    border-radius: 18px;
+    text-align: center;
+    border: solid 2px white;
+    font-size: 20px;
+    line-height: 28px;
+    float: right;
+    margin: 5px;
+    margin-right: 15px;
+    float: right;
+    opacity: 0.8;
+
+
+
+}
+
+.top_right {
+    position: absolute;
+    right: 0px;
+}
+
+.botton_bell {
+    background-color: var(--background_bell);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 5px;
+    border: solid 2px white;
+    float: left;
+    cursor: pointer;
+
 }
