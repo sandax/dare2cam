@@ -23,7 +23,7 @@
         "chatinput chatinput sendbutton";
 }
 
-@media (max-width: 600px) {
+@media (max-width: 685px) {
     .container {
         display: grid;
         grid-template-columns: 1.3fr 0.7fr;
