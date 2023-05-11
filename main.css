@@ -34,6 +34,11 @@
             "chatinput sendbutton"
             "mycam mycam";
     }
+
+    .top_right {
+        position: absolute;
+        top: 0px;
+    }
 }
 
 .viewcam {
@@ -45,6 +50,7 @@
 .mycam {
     grid-area: mycam;
     background-color: var(--background_view);
+    position: relative;
 }
 
 .chatarea {
@@ -202,9 +208,10 @@
 .top_right {
     position: absolute;
     right: 0px;
+    bottom: 0px;
 }
 
-.botton_bell {
+.button_bell {
     background-color: var(--background_bell);
     width: 30px;
     height: 30px;
@@ -215,4 +222,14 @@
     float: left;
     cursor: pointer;
 
+}
+
+.timer img {
+    width: 12px;
+}
+
+.button_bell img {
+    margin-top: 1px;
+    width: 16px;
+    height: 27px;
 }
