@@ -6,6 +6,7 @@
     --background_button_hover: #f9096dc4;
     --background_gift: #11111196;
     --text_color: #ffffff;
+    --gift_open: blue;
 
 }
 
@@ -127,7 +128,7 @@
 }
 
 .gift_button2 {
-    background-color: blue;
+    background-color: var(--gift_open);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -170,7 +171,7 @@
     height: 30px;
     border-radius: 18px;
     text-align: center;
-    border: solid 2px white;
+    border: solid 2px var(--text_color);
     font-size: 20px;
     line-height: 26px;
     float: right;
@@ -192,7 +193,7 @@
     height: 30px;
     border-radius: 18px;
     text-align: center;
-    border: solid 2px white;
+    border: solid 2px var(--text_color);
     font-size: 20px;
     line-height: 28px;
     float: right;
@@ -212,14 +213,14 @@
 }
 
 .button_bell {
-    /* background-color: var(--background_bell); */
+    background-color: var(--background_bell);
     background-image: url(assets/img/bell_on.svg);
     width: 30px;
     height: 30px;
     border-radius: 50%;
     text-align: center;
     margin-top: 5px;
-    border: solid 2px white;
+    border: solid 2px var(--text_color);
     float: left;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -230,6 +231,7 @@
 
 .button_bell:hover {
     background-image: url(assets/img/bell_off.svg);
+    background-color: var(--background_view);
 }
 
 .timer img {
