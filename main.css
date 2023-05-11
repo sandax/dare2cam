@@ -80,6 +80,7 @@
 .chatarea {
     grid-area: chatarea;
     overflow-y: scroll;
+    background-color: var(--text_color);
 }
 
 .chatinput {
