@@ -212,7 +212,8 @@
 }
 
 .button_bell {
-    background-color: var(--background_bell);
+    /* background-color: var(--background_bell); */
+    background-image: url(assets/img/bell_on.svg);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -221,7 +222,14 @@
     border: solid 2px white;
     float: left;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
 
+}
+
+.button_bell:hover {
+    background-image: url(assets/img/bell_off.svg);
 }
 
 .timer img {
