@@ -1,308 +1,325 @@
 :root {
-  --background_bell: green;
-  --background_view: #313131;
-  --background_input: #000000;
-  --background_button: #F9096C;
-  --background_button_hover: #f9096dc4;
-  --background_gift: #11111196;
-  --text_color: #ffffff;
-  --gift_open: blue;
+    --background_bell: green;
+    --background_view: #313131;
+    --background_input: #000000;
+    --background_button: #F9096C;
+    --background_button_hover: #f9096dc4;
+    --background_gift: #11111196;
+    --text_color: #ffffff;
+    --gift_open: blue;
 
 }
 
 * {
-  font-family: Arial;
+    font-family: Arial;
 }
 
 .container {
-  margin: auto;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1.8fr 0.2fr;
-  gap: 1px 1px;
-  grid-template-areas:
-    "viewcam viewcam mycam"
-    "viewcam viewcam chatarea"
-    "chatinput chatinput sendbutton";
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.8fr 0.2fr;
+    gap: 1px 1px;
+    grid-template-areas:
+        "viewcam viewcam mycam"
+        "viewcam viewcam chatarea"
+        "chatinput chatinput sendbutton";
 }
 
 @media (max-width: 685px) {
-  .container {
-    gap: 0px 0px;
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    grid-template-rows: 1.5fr 0.7fr 0.1fr 1.6fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "viewcam viewcam"
-      "chatarea chatarea"
-      "chatinput sendbutton"
-      "mycam mycam";
-  }
+    .container {
+        gap: 0px 0px;
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        grid-template-rows: 1.5fr 0.7fr 0.1fr 1.6fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "viewcam viewcam"
+            "chatarea chatarea"
+            "chatinput sendbutton"
+            "mycam mycam";
+    }
 
-  .mystats {
-    position: absolute;
-    top: 0px;
-  }
+    .mystats {
+        position: absolute;
+        top: 0px;
+    }
+
+    .timer {
+        background-color: var(--background_gift);
+        color: var(--text_color);
+        width: 100px;
+        height: 30px;
+        border-radius: 18px;
+        text-align: center;
+        border: solid 2px var(--text_color);
+        font-size: 18px;
+        padding-top: 3px;
+        float: right;
+        margin: 5px;
+        margin-right: 15px;
+        float: right;
+        opacity: 0.8;
+        padding-right: 5px;
+    }
 }
 
 .viewcam {
-  grid-area: viewcam;
-  background-color: var(--background_view);
-  position: relative;
+    grid-area: viewcam;
+    background-color: var(--background_view);
+    position: relative;
 }
 
 .mycam {
-  grid-area: mycam;
-  background-color: var(--background_view);
-  position: relative;
+    grid-area: mycam;
+    background-color: var(--background_view);
+    position: relative;
 }
 
 .chatarea {
-  grid-area: chatarea;
-  overflow-y: scroll;
-  background-color: var(--text_color);
+    grid-area: chatarea;
+    overflow-y: scroll;
+    background-color: var(--text_color);
 }
 
 .chatinput {
-  grid-area: chatinput;
-  background-color: var(--background_input);
-  height: 40px;
+    grid-area: chatinput;
+    background-color: var(--background_input);
+    height: 40px;
 }
 
 .sendbutton {
-  grid-area: sendbutton;
+    grid-area: sendbutton;
 }
 
 
 
 .input_chat {
-  margin-top: 8px;
-  margin-left: 10px;
-  background: transparent;
-  border: none;
-  width: 100%;
-  outline: none;
-  color: var(--text_color);
-  font-size: 18px;
+    margin-top: 8px;
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    color: var(--text_color);
+    font-size: 18px;
 }
 
 
 .button_bar {
-  width: 100%;
-  position: absolute;
-  bottom: 5px;
-  z-index: 1;
-  opacity: 0.7;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    z-index: 1;
+    opacity: 0.7;
 
 }
 
 .button_send {
-  border: 1px solid var(--background_button);
-  width: 100%;
-  height: 40px;
-  background-color: var(--background_button);
-  color: var(--text_color);
-  font-size: 18px;
+    border: 1px solid var(--background_button);
+    width: 100%;
+    height: 40px;
+    background-color: var(--background_button);
+    color: var(--text_color);
+    font-size: 18px;
 
 }
 
 .button_send:hover,
 .gift_button:hover {
-  cursor: pointer;
-  background-color: var(--background_button_hover);
+    cursor: pointer;
+    background-color: var(--background_button_hover);
 }
 
 .gift_button {
-  background-color: var(--background_button);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  margin: 5px;
-  margin-top: 7px;
+    background-color: var(--background_button);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px;
+    margin-top: 7px;
 
 
 }
 
 .gift_button_select {
-  /* outline: 3px solid var(--background_button); */
+    /* outline: 3px solid var(--background_button); */
 }
 
 .gift_button2 img,
 .gift_button img {
-  width: 26px;
-  height: 40px;
+    width: 26px;
+    height: 40px;
 }
 
 .gift_button2 {
-  background-color: var(--gift_open);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  margin: 5px;
+    background-color: var(--gift_open);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px;
 }
 
 .dropup {
-  position: absolute;
-  display: inline-block;
+    position: absolute;
+    display: inline-block;
 
-  margin: 5px;
+    margin: 5px;
 }
 
 
 
 .dropup:hover .dropup-content {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .dropup-content {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-  position: absolute;
-  background-color: var(--background_gift);
-  color: var(--text_color);
-  margin-top: -50px;
-  z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    position: absolute;
+    background-color: var(--background_gift);
+    color: var(--text_color);
+    margin-top: -50px;
+    z-index: 3;
 
-  border-radius: 30px;
-  width: 50px;
+    border-radius: 30px;
+    width: 50px;
 }
 
 .next_button {
-  background-color: var(--background_gift);
-  color: var(--text_color);
-  width: 100px;
-  height: 30px;
-  border-radius: 18px;
-  text-align: center;
-  border: solid 2px var(--text_color);
-  font-size: 20px;
-  line-height: 26px;
-  float: right;
-  margin: 5px;
-  margin-right: 15px;
-  cursor: pointer;
-  opacity: 0.5;
+    background-color: var(--background_gift);
+    color: var(--text_color);
+    width: 100px;
+    height: 30px;
+    border-radius: 18px;
+    text-align: center;
+    border: solid 2px var(--text_color);
+    font-size: 20px;
+    line-height: 26px;
+    float: right;
+    margin: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .next_button:hover {
-  background-color: var(--background_button);
-  opacity: 1;
+    background-color: var(--background_button);
+    opacity: 1;
 }
 
 .timer {
-  background-color: var(--background_gift);
-  color: var(--text_color);
-
-  height: 30px;
-  border-radius: 18px;
-  text-align: center;
-  border: solid 2px var(--text_color);
-  font-size: 18px;
-  line-height: 27px;
-  float: right;
-  margin: 5px;
-  margin-right: 15px;
-  float: right;
-  opacity: 0.8;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-.timer img {
-  width: 12px;
-  margin-top: -2px;
+    background-color: var(--background_gift);
+    color: var(--text_color);
+    width: 100px;
+    height: 30px;
+    border-radius: 18px;
+    text-align: center;
+    border: solid 2px var(--text_color);
+    font-size: 18px;
+    padding-top: 2px;
+    line-height: 28px;
+    float: right;
+    margin: 5px;
+    margin-right: 15px;
+    float: right;
+    opacity: 0.8;
+    padding-right: 5px;
 }
 
 .mystats {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
 
 .button_bell {
-  background-color: var(--background_bell);
-  background-image: url(assets/img/bell_on.svg);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: solid 2px var(--text_color);
-  margin-top: 5px;
-  float: left;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px 20px;
+    background-color: var(--background_bell);
+    background-image: url(assets/img/bell_on.svg);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 2px var(--text_color);
+    margin-top: 5px;
+    float: left;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
 
 }
 
 .button_bell:hover {
-  background-image: url(assets/img/bell_off.svg);
-  background-color: var(--background_view);
+    background-image: url(assets/img/bell_off.svg);
+    background-color: var(--background_view);
+}
+
+.timer img {
+    width: 12px;
 }
 
 .button_bell img {
-  margin-top: 1px;
-  width: 16px;
-  height: 27px;
+    margin-top: 1px;
+    width: 16px;
+    height: 27px;
 }
 
 .loading {
-  display: none;
-  position: absolute;
-  top: calc(50% - 15%);
-  left: calc(50% - 10%);
+    display: none;
+    position: absolute;
+    top: calc(50% - 15%);
+    left: calc(50% - 10%);
 
 }
 
 .loading img {
-  width: 30%
+    width: 30%
 }
 
 .settings {
-  position: absolute;
+    position: absolute;
 }
 
 .cam {
-  margin: 2px;
-  background-color: var(--background_view);
-  background-image: url(assets/img/eye_on.svg);
-  width: 20px;
-  height: 20px;
-  float: left;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px 20px;
+    margin: 2px;
+    background-color: var(--background_view);
+    background-image: url(assets/img/eye_on.svg);
+    width: 20px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
 }
 
 .cam:hover {
-  background-image: url(assets/img/eye_off.svg);
+    background-image: url(assets/img/eye_off.svg);
 }
 
 .mic {
-  margin: 2px;
-  margin-left: 0px;
-  background-color: var(--background_view);
-  background-image: url(assets/img/mic_on.svg);
-  width: 20px;
-  height: 20px;
-  float: left;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px 20px;
+    margin: 2px;
+    margin-left: 0px;
+    background-color: var(--background_view);
+    background-image: url(assets/img/mic_on.svg);
+    width: 20px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
 }
 
 .mic:hover {
-  background-image: url(assets/img/mic_off.svg);
+    background-image: url(assets/img/mic_off.svg);
 }
 
 .viewcam .settings {
-  bottom: 0px;
+    bottom: 0px;
 }
