@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1.8fr 0.2fr;
-    gap: 0px 0px;
+    gap: 1px 1px;
     grid-template-areas:
         "viewcam viewcam mycam"
         "viewcam viewcam chatarea"
