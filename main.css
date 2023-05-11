@@ -120,6 +120,9 @@
 
 }
 
+.gift_button_select {
+    /* outline: 3px solid var(--background_button); */
+}
 
 .gift_button2 img,
 .gift_button img {
