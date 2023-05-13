@@ -320,6 +320,24 @@
     background-image: url(assets/img/mic_off.svg);
 }
 
+.gear {
+    margin: 2px;
+    margin-left: 0px;
+    background-color: var(--background_view);
+    background-image: url(assets/img/gear.svg);
+    width: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+.gear:hover {
+    background-color: var(--gift_open);
+}
+
 .viewcam .settings {
     bottom: 0px;
 }
